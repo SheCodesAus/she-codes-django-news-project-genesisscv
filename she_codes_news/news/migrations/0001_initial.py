@@ -14,11 +14,13 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='NewsStory',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=200)),
                 ('author', models.CharField(max_length=200)),
                 ('pub_date', models.DateTimeField()),
                 ('content', models.TextField()),
+                ('image', models.TextField()),
             ],
         ),
     ]
