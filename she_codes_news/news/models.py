@@ -2,6 +2,7 @@ from django.contrib.auth import get_user_model
 from django.db import models
 
 
+
 class NewsStory(models.Model):
     title = models.CharField(max_length=200)
     author = models.ForeignKey(get_user_model(),
@@ -9,4 +10,6 @@ class NewsStory(models.Model):
     author = models.CharField(max_length=200)
     pub_date = models.DateTimeField()
     content = models.TextField()
-    image = models.TextField()
+    # adding the ImageField
+    image = models.URLField(blank=False)
+    
