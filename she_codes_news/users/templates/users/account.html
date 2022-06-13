@@ -1,9 +1,16 @@
 {% extends 'base.html' %}
+{% load static%}
+
 
 {% block content %}
 
-<h2>Account</h2>
+            <div id="user-profile">
+                <h2> Account Profile </h2><br>
 
-<p>{{ request.user.username}}</p>
+                <p> Username: {{ user.username }}</p> <br>
+                <p> Email: {{ user.email }} </p><br>
+                <p> Date joined: {{ user.date_joined }}</p> <br>
+                <p> Session started at: {{ user.last_login }}</p> <br>
+
 
 {% endblock %}
