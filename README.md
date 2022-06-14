@@ -14,6 +14,8 @@ This is my blog project, which contains the following features:
 
 Heroku links: https://sleepy-anchorage-61589.herokuapp.com/, https://dashboard.heroku.com/apps/sleepy-anchorage-61589 ( currently not working :( )
 
+Please see screenshots attached,
+
 I would love to add more features and styling once I have a better understanding of Django!
 
 Thanks for reading!
