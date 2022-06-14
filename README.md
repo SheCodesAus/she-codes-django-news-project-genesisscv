@@ -16,9 +16,7 @@ Heroku links: https://sleepy-anchorage-61589.herokuapp.com/, https://dashboard.h
 
 I would love to add more features and styling once I have a better understanding of Django!
 
-Thanks for reading,
-Genesis.
-
+Thanks for reading!
 
 
 
