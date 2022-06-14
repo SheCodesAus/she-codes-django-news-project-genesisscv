@@ -15,12 +15,12 @@ class IndexView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['latest_stories'] = NewsStory.objects.all()[:4]
-        context['all_stories'] = NewsStory.objects.all()
+        context['latest_stories'] = NewsStory.objects.all().order_by('pub_date')[:4]
+        context['all_stories'] = NewsStory.objects.all().order_by('pub_date')
         return context
 
 class StoryFilterView(generic.TemplateView):
-    template_name = 'news/index.html'
+    template_name = 'news/storyfilter.html'
 
     def get_queryset(self):
         '''Return all news stories.'''
@@ -28,8 +28,8 @@ class StoryFilterView(generic.TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['latest_stories'] = NewsStory.objects.all()[:4]
-        context['all_stories'] = NewsStory.objects.all()
+        context['latest_stories'] = NewsStory.objects.all().filter(id=1).order_by('pub_date')[:4]
+        context['all_stories'] = NewsStory.objects.all().filter(id=1).order_by('pub_date')
         return context
 
 
@@ -48,6 +48,7 @@ class AddStoryView(generic.CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
 
 
 

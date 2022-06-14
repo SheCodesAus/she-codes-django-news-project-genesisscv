@@ -3,9 +3,13 @@
     <a href="{% url 'news:storyfilter' %}">Story Filter</a>
     {% if request.user.is_authenticated %}
         <a href="{% url 'users:account-details' %}">{{ user.username }}</a>
+        <!-- new code -->
+        <a href="{% url 'news:newStory' %}">Write New Story</a>
+        <!-- new code -->
         <a href="{% url 'logout' %}">Logout</a>
     {% else %}
     <a href="{% url 'login' %}">Login</a>
     {% endif %}
 
 </nav>
+
