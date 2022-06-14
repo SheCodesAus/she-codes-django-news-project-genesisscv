@@ -10,7 +10,7 @@ This is my blog project, which contains the following features:
 - Account functionality, so a new user can sign up to be an author.
 - Filter to view stories by a particular author.
 - Function that shows/hides the relevant information and buttons based on whether the user is logged in/out 
-- Function that only allows you to create a new story if I you are logged in
+- Function that only allows you to create a new story if you are logged in
 
 Heroku links: https://sleepy-anchorage-61589.herokuapp.com/, https://dashboard.heroku.com/apps/sleepy-anchorage-61589 ( currently not working :( )
 
